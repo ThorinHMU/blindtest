@@ -1,0 +1,97 @@
+body{
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+}
+
+a.title{
+    font-size: 75px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+div.button{
+    display: inline-grid;
+    margin-top: 150px;
+}
+
+div.button a{
+    text-decoration: none;
+    margin: 5px;
+    background-color: #181818;
+    color: #fff;
+    font-size: 40px;
+    border: 2px solid #0500b6;
+    border-radius: 100px;
+    padding: 25px;
+}
+
+div.button a:hover{
+    background-color: #070385;
+    border-color: #fff;
+}
+
+div#head {
+    display: flex;
+}
+
+div#head1 {
+    width: 33%;
+}
+
+div#head2 {
+    width: 33%;
+    text-align: center;
+}
+div#head3 {
+    width: 33%;
+    align-content: center;
+}
+
+div#head3 a {
+    background-color: #070385;
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #0500b6;
+    border-radius: 100px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+div#head3 p{
+    display: inline;
+    margin-left: 10px;
+}
+
+div#head3 a:hover {
+    background-color: #070385;
+    border-color: #fff;
+}
+
+div#login {
+    align-content: center;
+    width:100%;
+    margin-top: 10%;
+}
+
+div#login input.button{
+    background-color: #070385;
+    color: #fff;
+    border: 2px solid #0500b6;
+    text-decoration: none;
+    text-align: center;
+}
+div#login form{
+    margin-bottom: 18px;
+}
+
+div#login a{
+    padding-inline: 143px;
+    background-color: #070385;
+    color: #fff;
+    border: 2px solid #0500b6;
+    text-decoration: none;
+    text-align: center;
+}
+

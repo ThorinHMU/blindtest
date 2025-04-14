@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Create Account</title>
+</head>
+<body>
+<div id="head">
+    <div id="head1">
+
+    </div>
+    <div id="head2">
+        <a class="title" href="/" >Blindtest</a>
+    </div>
+    <div id="head3">
+        {% if user.is_authenticated %}
+        <a href="/logout">Se deconnecter</a>
+        <p>{{ user.username }}</p>
+        {% endif %}
+    </div>
+</div>
+<div id="login">
+    <form method="POST" action="#">
+        {% csrf_token %}
+        <label for="username"></label><input type="text" name="username" id="username" placeholder="Username">
+        <label for="password"></label><input type="password" name="password" id="password" placeholder="Password">
+        <input type="submit" value="Créer un compte" class="button">
+    </form>
+</div>
+</body>
+</html>
