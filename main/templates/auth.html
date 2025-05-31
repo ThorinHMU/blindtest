@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block prout %}
+<div id="login-box">
+    {% block content %}{% endblock %}
+    <form method="post" action={% block action %}{% endblock %}>
+        {% csrf_token %}
+        <label>Pseudo</label>
+        <input type="text" name="username" placeholder="Pseudo"/>
+        <label>Mots de passe</label>
+        <input type="password" name="password" placeholder="Password"/>
+        <input type="submit" value="Se connecter"/>
+    </form>
+</div>
+{% endblock %}

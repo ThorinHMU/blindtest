@@ -1,97 +1,187 @@
-body{
-    background-color: #181818;
-    color: #fff;
-    text-align: center;
+@font-face {
+    font-family: 'switzer';
+    src: url('../fonts/Switzer_Complete/Fonts/TTF/Switzer-Variable.ttf');
 }
 
-a.title{
-    font-size: 75px;
+*{
     margin: 0;
-    color: #fff;
-    text-decoration: none;
+    padding: 0;
+    transition-duration: 0.2s;
 }
 
-div.button{
-    display: inline-grid;
-    margin-top: 150px;
+body{
+    background: #260041;
+    color: white;
+    font-family: switzer, sans-serif;
 }
 
-div.button a{
-    text-decoration: none;
-    margin: 5px;
-    background-color: #181818;
-    color: #fff;
-    font-size: 40px;
-    border: 2px solid #0500b6;
-    border-radius: 100px;
-    padding: 25px;
-}
+/*Header*/
 
-div.button a:hover{
-    background-color: #070385;
-    border-color: #fff;
-}
-
-div#head {
+#header{
+    height: 100px;
     display: flex;
+    position: relative;
+    margin-top: 5px;
 }
 
-div#head1 {
-    width: 33%;
+#left-header{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    align-items: center;
+    height: 100%;
+    transform: translateX(-50%);
 }
 
-div#head2 {
-    width: 33%;
-    text-align: center;
-}
-div#head3 {
-    width: 33%;
-    align-content: center;
+#title{
+    text-decoration: none;
+    color: white;
+    font-size: 4rem;
 }
 
-div#head3 a {
-    background-color: #070385;
-    color: #fff;
-    font-size: 20px;
-    border: 2px solid #0500b6;
-    border-radius: 100px;
+#right-header{
+    display: flex;
+    margin: 0 10px 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+
+#profil{
+    display: inline-block;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+#profil-main{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    padding: 0 10px 0 10px;
+}
+
+#profil-main:hover + #profil-menu, #profil-menu:hover{
+    display: block;
+}
+
+#profil-icon{
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 66%;
+}
+
+#profil-menu{
+    display: None;
+}
+
+#profil-menu a{
+    text-decoration: none;
+    color: black;
+    display: block;
     padding: 10px;
+}
+
+#profil-menu li{
+    list-style: none;
+    text-align: center;
+    background: #e5fdf7;
+}
+
+#profil-menu li:last-child, #profil-menu li:last-child a{
+    border-radius: 0 0 10px 10px;
+}
+
+#profil-menu li:hover a, #profil-menu li:hover{
+   background: #0f0018;
+    color: white;
+}
+
+
+#profil:hover{
+    cursor: pointer;
+    background: #0f0018;
+}
+
+#profil:hover > *{
+    color: #8400ff;
+    border-color: #8400ff;
+}
+
+
+.auth-button{
     text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px;
+    background: white;
+    color: blue;
+    border-radius: 20px;
 }
 
-div#head3 p{
-    display: inline;
-    margin-left: 10px;
+/*Acceuil*/
+
+#main{
+    width: 33%;
+    margin: 100px auto;
 }
 
-div#head3 a:hover {
-    background-color: #070385;
-    border-color: #fff;
+#home_buttons {
+    margin-top: 20px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-div#login {
-    align-content: center;
-    width:100%;
-    margin-top: 10%;
-}
 
-div#login input.button{
-    background-color: #070385;
-    color: #fff;
-    border: 2px solid #0500b6;
+#home_buttons a{
     text-decoration: none;
+    color: white;
+    background: #8400ff;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 15px 5px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+#home_buttons a:last-child{
+    grid-column: span 2;
+}
+
+#home_buttons a:hover{
+    background-color: #000262;
+    border-color: white;
+}
+
+
+
+/*Login*/
+
+#login-box{
+    width: 33%;
+    margin: 100px auto;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 9px -9px 20px rgb(0 0 0 / 49%);;
+}
+
+#login-box .auth-title{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#login-box form *{
+    display: block;
+    margin: 0 auto;
     text-align: center;
 }
-div#login form{
-    margin-bottom: 18px;
-}
 
-div#login a{
-    padding-inline: 143px;
-    background-color: #070385;
-    color: #fff;
-    border: 2px solid #0500b6;
-    text-decoration: none;
-    text-align: center;
+#login-box form input{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
-

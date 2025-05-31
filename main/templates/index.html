@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Title</title>
-</head>
-<body>
-    <div id="head">
-        <div id="head1">
+{% extends "base.html" %}
 
-        </div>
-        <div id="head2">
-            <a class="title" href="/" >Blindtest</a>
-        </div>
-        <div id="head3">
-            {% if user.is_authenticated %}
-            <a href="/logout">Se deconnecter</a>
-            <p>{{ user.username }}</p>
-            {% else %}
-            <a href="../login">Se connecter</a>
-            {% endif %}
-        </div>
-    </div>
+{% block title %}Acceuil{% endblock %}
 
-    <div class="button">
-        <a>Rejoindre une partie</a>
-        <a>Créer une partie</a>
+{% block prout %}
+<div id="main">
+    <h1>Blind-Test</h1>
+    <p>Bienvenue sur Blind-test un site pour vous amuser entre amis avec une grande varieté de Musiques. Pour plus de
+    personaliation, vous pouvez importer vos propres musiques</p>
+    <div id="home_buttons">
+        <a href="/">Lancer une partie</a>
+        <a href="/">Rejoindre une partie</a>
+        <a href="/">Mode Entrainement</a>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
